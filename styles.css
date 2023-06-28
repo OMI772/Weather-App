@@ -1,0 +1,250 @@
+*,*::before,*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Belanosima', sans-serif;
+}
+
+:root{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorDark1);
+    /* background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); */
+    background-image: url(assets/sky\ bg2.png);
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    padding-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+
+.tab-container{
+    width: 90%;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 4rem;
+    color: var(--colorLight2);
+}
+
+.tab{
+    cursor: pointer;
+    letter-spacing: 1.7px;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+}
+
+.tab.current-tab{
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+    color: var(--colorDark1);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+.btn{
+    all:unset;
+    text-transform: uppercase;
+    background-color: var(--colorDark2);
+    font-size: 0.80rem;
+    border-radius: 5px;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grantLocationContainer{
+    display: none;
+}
+
+.grantLocationContainer.active{
+    display: flex;
+}
+
+.grantLocationContainer img{
+    margin-bottom: 2rem;
+}
+
+.grantLocationContainer p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.grantLocationContainer p:last-of-type{
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loadingContainer {
+    display: none;
+}
+
+.loadingContainer.active{
+    display: flex;
+}
+
+.loadingContainer p{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loadingContainer img{
+    width: 8rem;
+    height: 8rem;
+
+}
+
+.user-weather-container{
+    display: none;
+}
+
+.user-weather-container.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+.city-name p{
+    font-size: 3rem;
+    margin: 0 1rem;
+}
+
+.city-name img{
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.weather-desc{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.temperature{
+    display: flex;
+    font: 500;
+    
+    font-size: 2rem;
+}
+
+.parameter-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px 20px;
+    margin-top: 2rem;
+    justify-content: center;
+    
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 150px;
+    gap: 10px 10px;
+    max-width: 200px;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.search-form-container{
+    display: none;
+}
+
+.search-form-container.active{
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.search-form-container input{
+    all: unset;
+    width: 50%;
+    background-color: var(--colorLight1);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    color: #112d4e;
+    text-transform: capitalize;
+}
+
+.search-form-container button{
+    /* all: unset; */
+    /* background: transparent; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--colorLight1);
+    cursor: pointer;
+}
+
+.error404{
+    display: none;
+}
+
+.error404.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.error404 img{
+    width: 350px;
+    height: 350px;
+}
+
+.error404 p{
+    color: var(--colorLight1);
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 514px) {
+    .parameter-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }

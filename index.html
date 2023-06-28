@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+
+      <div class="container">
+        <!-- grant location container  -->
+        <div class="sub-container grantLocationContainer">
+          <img
+            src="assets/Current location-pana.svg"
+            width="200"
+            height="200"
+            loading="lazy"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow access to get Weather Information</p>
+          <button class="btn" data-grantLocation>Give Access</button>
+        </div>
+
+        <!-- Loading sceen container  -->
+        <div class="sub-container loadingContainer">
+          <img src="assets/loading.gif" alt="Loading" />
+          <p>Loading</p>
+        </div>
+
+        <!-- search weather form -->
+        <form class="search-form-container" data-searchLocation>
+          <input
+            type="text"
+            data-searchInput
+            placeholder="search the Location..."
+          />
+          <button class="searchBtn" type="submit">
+            <img src="assets/searchIcon.png" width="20" height="20" />
+          </button>
+        </form>
+
+        <!-- Weather info tab  -->
+        <div class="user-weather-container">
+          <div class="city-name">
+            <p data-city-name></p>
+            <img data-country-flag alt="" />
+          </div>
+          <p class="weather-desc" data-weather-desc></p>
+          <img data-weather-img height="50" width="50" />
+          <div class="temperature">
+            <p data-temp></p>
+          </div>
+          <!-- 3 cards  -->
+
+          <div class="parameter-container">
+            <!-- card-1  -->
+            <div class="card-container">
+              <img src="assets/wind.png" height="50" width="50" />
+              <p>WindSpeed</p>
+              <p data-windSpeed></p>
+            </div>
+
+            <!-- card-2  -->
+            <div class="card-container">
+              <img src="assets/humidity.png" height="50" width="50" />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <!-- card-3  -->
+            <div class="card-container">
+              <img src="assets/clouds.png" height="50" width="50" />
+              <p>Cloudy</p>
+              <p data-cloud></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 404 Error found  -->
+        <div class="error404">
+          <img src="assets/not-found.png" alt="" />
+          <p>Unable to fetch the weather</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
